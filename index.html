@@ -1,0 +1,792 @@
+<html>
+  <head>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="icon" type="img/png" href="favicon-32x32.png">
+       <title>PT12_Group5</title>
+	   
+	 
+	   <!--fonts-->
+	   
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700&family=League+Spartan:wght@600&family=Montserrat:wght@500&family=Ovo&family=Poppins:wght@500&family=Yeseva+One&display=swap" rel="stylesheet">
+	   
+	   <style>
+	   
+			html {
+			   background-color:#ffffff;
+			   }
+			   
+			.firstpage {
+              position: relative;
+              
+                }
+			   
+			.firstpage .homebtn {
+			     position:absolute;
+				 left:40px;
+				 right:50;
+				 top: 485px;
+			     height: 7%;
+				 width: 20%;
+				 border-style: solid;
+				 border-color: white;
+			     color: white;
+				 background-color: transparent; 
+				 border-radius: 4px;
+				 box-shadow: inset 0 0 0 0 #FF7D00;
+				 transition: ease-out 0.8s;
+				 font-size: 1.5rem;
+				 outline: none;
+				 
+				 font-family: 'League Spartan', sans-serif;
+			
+			}
+			
+			.firstpage .homebtn:hover {
+			     box-shadow: inset 500px 0 0 0 #f9e506;
+				 cursor: pointer;
+				 color: #001219;
+			}
+			   
+	        #main {
+	           position:static;
+	           height:138.78%;
+	           width:auto;
+			   object-fit: contain;
+			   margin:-10;
+			   padding:-10;
+			   }
+			   
+			
+			.headings {
+			   text-align: center;
+			   padding-top:200px;
+			   font-size: 850%;
+	           font-family: 'Yeseva One', cursive;
+			   font-weight:normal;
+			   color:#001219;
+			   }
+			
+			* {
+                margin: 0;
+                padding: 0;
+            } 
+			
+			.subheadings {
+			   text-align: center;
+			   padding-bottom: 120px;
+			   font-size: 125%;
+	           font-family: 'Ovo', serif;
+			   font-weight:normal;
+			   color:#001219;
+			   }
+		
+            
+			<!--navbar-->
+			
+ 
+            
+            body {
+			    
+                overflow-x: hidden;
+            }
+            
+            nav {
+                position: fixed;
+                z-index: 1000;
+                top: 0;
+                bottom: 0;
+                width: 200px;
+                background-color: #001219;
+                transform: translate3d(-200px, 0, 0);
+                transition: transform 0.4s ease;
+            }
+            .active-nav nav {
+                transform: translate3d(0, 0, 0);
+            }
+            nav ul {
+                list-style: none;
+                margin-top: 100px;
+            }
+			ul {
+			    font-family: 'Poppins', sans-serif; 
+			}
+            nav ul li a {
+                text-decoration: none;
+                display: block;
+                text-align: left;
+                color: #ffffff;
+                padding: 5px 0;
+				margin: 10px;
+            }
+			
+            #navtitle {
+			    font-family: 'Barlow Semi-condensed', sans-serif;
+			    text-decoration: none;
+                display: block;
+                color: #ffffff;
+				text-align:center;
+				margin-top: -50px;
+				margin-bottom: 50px;
+				font-size: 45px;
+			}
+			
+            .nav-toggle-btn {
+                display: block;
+                position: absolute;
+                left: 200px;
+                width: 40px;
+                height: 40px;
+                background-color: #001219;
+            }
+            
+            .content {
+                text-align: center;
+                transition: transform 0.4s ease;
+            }
+            .active-nav .content {
+                transform: translate3d(200px, 0, 0);
+            }
+		    
+			.navbtns {
+			      display: flex;
+				  flex-direction: row;
+				  justify-content: space-evenly;
+				  align-items: center;
+				  text-align: center;
+				  cursor: pointer;
+				  margin: auto;
+				  
+				  
+				  
+			}
+			
+
+			.navhover1 {
+			     margin-top: 15px;
+				 margin-bottom: 15px;
+			     color: white;
+			     font-size: 20px;
+				 background-color: #001219;
+				 border-radius: 4px;
+				 box-shadow: inset 0 0 0 0 #FF7D00;
+				 transition: ease-out 0.8s;
+				 outline: none;
+				 border: 3px #42fBF2;
+				 font-family: 'League Spartan', sans-serif;
+			
+			}
+			
+			.navhover1:hover {
+			     box-shadow: inset 0 -200px 0 0 #FFDD00;
+				 cursor: pointer;
+				 color: #001219;
+				 
+			}
+			
+		    <!--Grid-->
+			
+			body{
+                padding:0;
+                text-align:center;
+            }
+			
+            .container{
+			    position: static;
+                margin-left:7%;
+                margin-right:7%;
+                display:grid;
+                grid-template-columns: repeat(6,1fr);
+                grid-auto-rows:100px 300px;
+                grid-gap:25px;
+                grid-auto-flow: dense;
+            }
+
+            .gallery-item{
+                width:100%;
+                height:100%;
+                position:relative;
+            }
+
+            .gallery-item .image{
+                width:100%;
+                height:100%;
+            }
+
+           .gallery-item .image img{
+                width:100%;
+                height:100%;
+                object-fit: cover;
+                object-position:50% 50%;
+	            margin: 0 10px;
+		        box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
+		        transition: 1s;
+            }
+			
+           .gallery-item:hover .image img{
+                transform: scale(1.04);
+		        z-index: 2;
+            }
+
+          .gallery-item .text{
+                opacity:0;
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%,-50%);
+                color:#fff;
+                font-size:25px;
+                pointer-events:none;
+                z-index:4;
+                display: flex;
+		        flex-direction: row;
+		        justify-content: center;
+            }
+
+         .gallery-item:hover .text{
+                opacity:1;
+                animation: move-down .3s linear;
+                padding:1em;
+                width:100%;
+            }
+
+.w-1{
+    grid-column: span 1;
+}
+.w-2{
+    grid-column: span 2;
+}
+.w-3{
+    grid-column: span 3;
+}
+.w-4{
+    grid-column: span 4;
+}
+.w-5{
+    grid-column: span 5;
+}
+.w-6{
+    grid-column: span 6;
+}
+
+.h-1{
+    grid-row: span 1;
+}
+.h-2{
+    grid-row: span 2;
+}
+.h-3{
+    grid-row: span 3;
+}
+.h-4{
+    grid-row: span 4;
+}
+.h-5{
+    grid-row: span 5;
+}
+.h-6{
+    grid-row: span 6;
+}
+
+
+
+
+@media screen and (max-width:500px){
+    .container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .w-1,.w-2,.w-3,.w-4,.w-5,.w-6{
+        grid-column:span 1;
+    }
+}
+
+            <!--Activities-->
+               
+			 <!--  .categories {
+			            position: static; 
+			   }
+			   
+			   .rect {
+			          height: 30%;
+					  width:55%;
+					  display: block;
+					  object-fit: cover;
+					  margin-top: 50px;
+					  margin-bottom: 50px;
+					  margin-left: auto;   
+                      margin-right: auto; 					  
+					  align: center;
+			   }
+			   
+			   .name {
+		        font-family: Futura Bk BT, monospace;
+				font-size: 1rem;
+				color: #ffffff;
+				position: absolute;
+				background-color:rgb(0, 0, 0, 0.6);
+				height: 30%;
+				width:55%;
+				top:0%;
+                left:0%;				
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				opacity: 0;
+				transition: opacity 0.25s;
+		       }
+		
+		       .name:hover {
+		         opacity: 1;
+		       }		-->
+            
+			.buttons {
+			     text-align: center;
+			}
+			
+            .btn {
+			      display: flex;
+				  flex-direction: row;
+				  justify-content: space-evenly;
+				  align-items: center;
+				  text-align: center;
+				  cursor: pointer;
+				  margin: auto;
+				  margin-top: 50px;
+				  margin-bottom: 50px;
+				  
+				  
+			}
+			
+
+			.btn1 {
+			     height: 30%;
+				 width:55%;
+				 border: none;
+			     color: white;
+				 background-color: rgb(255, 0, 68);
+				 border-radius: 4px;
+				 box-shadow: inset 0 0 0 0 #FF7D00;
+				 transition: ease-out 0.8s;
+				 font-size: 2rem;
+				 outline: none;
+				 border: 3px #42fBF2;
+				 font-family: 'League Spartan', sans-serif;
+			
+			}
+			
+			.btn1:hover {
+			     box-shadow: inset 800px 0 0 0 #FFDD00;
+				 cursor: pointer;
+				 color: #001219;
+				 
+			}
+			
+			.btn2 {
+			     height: 30%;
+				 width:55%;
+				 border: none;
+			     color: white;
+				 background-color: #01befe;
+				 border-radius: 4px;
+				 box-shadow: inset 0 0 0 0 #FF7D00;
+				 transition: ease-out 0.8s;
+				 font-size: 2rem;
+				 outline: none;
+				 border: 3px #42fBF2;
+				 font-family: 'League Spartan', sans-serif;
+			
+			}
+			
+			.btn2:hover {
+			     box-shadow: inset 800px 0 0 0 #FFDD00;
+				 cursor: pointer;
+				 color: #001219;
+				 
+			}
+			
+			.btn3 {
+			     height: 30%;
+				 width:55%;
+				 border: none;
+			     color: white;
+				 background-color: #8f00ff;
+				 border-radius: 4px;
+				 box-shadow: inset 0 0 0 0 #FF7D00;
+				 transition: ease-out 0.8s;
+				 font-size: 2rem;
+				 outline: none;
+				 border: 3px #42fBF2;
+				 font-family: 'League Spartan', sans-serif;
+			
+			}
+			
+			.btn3:hover {
+			     box-shadow: inset 800px 0 0 0 #FFDD00;
+				 cursor: pointer;
+				 color: #001219;
+				 
+			}
+			
+			.btn4 {
+			     height: 30%;
+				 width:55%;
+				 border: none;
+			     color: white;
+				 background-color: #adff02;
+				 border-radius: 4px;
+				 box-shadow: inset 0 0 0 0 #FF7D00;
+				 transition: ease-out 0.8s;
+				 font-size: 2rem;
+				 outline: none;
+				 border: 3px #f9e506;
+				 font-family: 'League Spartan', sans-serif;
+			
+			}
+			
+			.btn4:hover {
+			     box-shadow: inset 800px 0 0 0 #FFDD00;
+				 cursor: pointer;
+				 color: #001219;
+				 
+			}
+			
+			a {
+			     text-decoration: none;
+				 color: white;
+				  transition: ease-out 0.8s;
+			}
+            
+			a:hover {
+			    color: #001219;
+				text-shadow: inset 300px 0 0 0 ##001219;
+			}
+			
+			.mssg {
+			  display: block;
+			  margin-left:auto;
+			  margin-right:auto;
+			  column-count:1;
+			  font-family: 'Ovo', serif;
+			  font-size: 125%;
+			  text-align:center;
+			}
+			
+			.mem {
+			  font-family: 'Poppins', sans-serif;
+			  font-size: 150%;
+			  text-align:center;
+			  height: 500px;
+			}
+	   </style>
+	   
+  </head>
+   
+         <body>
+		 
+		 <script>(function(){setInterval("document.body.style.zoom=1/window.devicePixelRatio",1);var viewport=document.createElement("meta");viewport.id="viewport";viewport.name="viewport";viewport.content="width=device-width, initial-scale=1";document.body.parentElement.children[0].appendChild(viewport);})()</script>
+		 
+		 <!--Main Page-->
+		    <div class="firstpage content">
+		    <div class="buttons">
+		     <button  class="btn homebtn"><a href="#m">GET STARTED</a></button>
+			  </div>
+		       <img  id="main" src="home.png">
+			</div>
+		
+		<div class="content">
+		
+		<!--Memories-->
+			
+		        <h2 class="headings" id="m">memories</h2>
+				<h3 class="subheadings">gallery of the heart; a recollection.</h3>
+				
+		    </div>
+		
+		<!--navbar-->
+		
+		    <nav>
+            
+            <a href="#" class="nav-toggle-btn"></a>
+            
+			
+            <ul>
+			    
+                <li class="navbtns navhover1"><a href="#">Home</a></li>
+                <li class="navbtns navhover1"><a href="#m">Memories</a></li>
+                <li class="navbtns navhover1"><a href="#a">Activities</a></li>
+                <li class="navbtns navhover1"><a href="#m2">Messages</a></li>
+				<li class="navbtns navhover1"><a href="#o">Overview</a></li>
+            </ul>
+            
+        </nav>
+			
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        
+        (function() {
+            
+            var bodyEl = $('body'),
+                navToggleBtn = bodyEl.find('.nav-toggle-btn');
+            
+            navToggleBtn.on('click', function(e) {
+                bodyEl.toggleClass('active-nav');
+                e.preventDefault();
+            });
+            
+            
+            
+        })();
+        
+        
+    </script>
+			
+		
+		
+		<!--MeoriesGrid-->
+		
+         <div class="container">
+     
+    <div class="gallery-container w-3 h-2">
+      <div class="gallery-item">
+        <div class="image">
+          <img class="content" src="img1.jpeg" >
+        </div>
+        <div class="text"></div>
+      </div>
+    </div>
+
+    <div class="gallery-container w-3 h-3">
+      <div class="gallery-item">
+        <div class="image">
+          <img class="content" src="img2.jpeg" >
+        </div>
+        <div class="text"></div>
+      </div>
+    </div>
+
+    <div class="gallery-container w-3 h-2">
+      <div class="gallery-item">
+        <div class="image">
+          <img class="content" src="img3.jpg" >
+        </div>
+        <div class="text"></div>
+      </div>
+    </div>
+
+    <div class="gallery-container w-2">
+      <div class="gallery-item">
+        <div class="image">
+          <img class="content" src="img8.png" >
+        </div>
+        <div class="text"></div>
+      </div>
+    </div>
+
+    <div class="gallery-container w-4 h-2">
+      <div class="gallery-item">
+        <div class="image">
+          <img class="content" src="img5.jpg" >
+        </div>
+        <div class="text"></div>
+      </div>
+    </div>
+
+    <div class="gallery-container">
+      <div class="gallery-item">
+        <div class="image">
+          <img class="content" src="img6.jpeg" >
+        </div>
+        <div class="text"></div>
+      </div>
+    </div>
+
+    <div class="gallery-container h-2">
+      <div class="gallery-item">
+        <div class="image">
+          <img class="content" src="img7.jpeg" >
+        </div>
+        <div class="text"></div>
+      </div>
+    </div>
+
+    <div class="gallery-container h-2">
+      <div class="gallery-item">
+        <div class="image">
+          <img class="content" src="img4.jpeg" >
+        </div>
+        <div class="text"></div>
+      </div>
+	</div>  
+    </div>
+    
+		
+		<!--Activities-->
+		    <div id="a"class="content">
+			
+		        <h2 class="headings">activities</h2>
+				<h3 class="subheadings">collaborations that shall never be forgotten.</h3>
+				
+		    </div>
+         
+		 <div class="buttons content">
+		     <button class="btn btn1" onclick="document.location='Activities; Chinese New Year.html'">CHINESE NEW YEAR CELEBRATION</button>
+			 <button class="btn btn2" onclick="document.location='Activities; Holiday Special.html'">HOLIDAY SPECIAL</button>
+			 <button class="btn btn3" onclick="document.location='Activities; The Battles.html'">THE BATTLES</button>
+			 <button class="btn btn4" onclick="document.location='Activities; English Week.html'">ENGLISH WEEK</button>
+		 </div>
+		 
+		<!--Messages-->
+            
+			<div id="m2" class="content">
+			
+		        <h2 class="headings">messages</h2>
+				<h3 class="subheadings">a mailbox of greetings and farewells.</h3>
+				
+		    </div>
+		<div class="mssg content">
+		<p>
+		<b>AJ Palo</b>
+		<br>
+        <br>
+       <br> This year was really enjoyable for me because I was able to learn so much and experience new things!
+       <br> Although it was just online classes I realized that I’m going to miss this year a lot. 
+       <br> I’m really blessed to be able to finish my junior years of High School in BTTHS.
+  
+		</p>
+        <br>
+		<br>
+		<br>
+		<p>
+		<b>Miguel Tabura</b>
+		<br>
+<br>
+<br>It's a bummer that we had to end the final years of our junior high with the majority just facing the screen. 
+<br>Nevertheless, I still made some memories thanks to the opportunities given to me.
+ 
+		</p>
+		<br>
+		<br>
+		<br>
+		<p>
+		<b>Eurice Coyoca</b>
+		<br>
+<br>
+<br>School year 2021 - 2022 was a whole new experience, in my perspective. 
+<br>It had a lot of ups and downs especially with the current online setup, 
+<br>but it was a lot of fun with the activities given to us.
+		</p>
+		<br>
+		<br>
+		<br>
+		<p>
+		<b>Trisha Ordas</b>
+		<br>
+<br>
+<br>Despite still being in Online Distance Learning, 
+<br>the SY 2021-2022 was really a memorable year where I got out of my comfort zone 
+<br>and went on with the opportunities that were waiting for me. 
+<br>Although we were already exposed to Online Learning the past school year, 
+<br>there were still subjects and circumstances where I struggled. Thankfully, 
+<br>with the guidance of some friends and teachers, I learned the importance of 
+<br>Time Management and this really helped me get things done more efficiently.
+ 
+		</p>
+		<br>
+		<br>
+		<br>
+		<p>
+		<b>Ingrid Secuelan</b>
+		<br>
+<br>
+This school year has been a memorable, precious, and meaningful year for me as 
+<br>it taught me so many lessons, allowed me to meet my classmates and friends physically once again, 
+<br>and helped me become stronger as a person. Since we've had previous experience in online classes, 
+<br>I was able to get more acquainted with technology and enjoy classes more, particularly Web Design.
+<br> Although I'm saddened about the fact that some of us would be separated from one another after we 
+<br> graduate from Grade 10, I am glad to say that this school year has given us enough experiences and 
+ <br>lessons that will help encourage us as we move forward.
+ 
+		</p>
+		<br>
+		<br>
+		<br>
+		<p>
+		<b>Johnrey Castiller</b>
+		<br>
+<br>
+The school year 2021-2022 was great because I was able to finish all my requirements on time, 
+<br>met new friends, and gave honor to my school by winning a competition.
+ 
+		</p>
+		<br>
+		<br>
+		<br>
+		
+		<p><b>Michele Magdato</b>
+		<br>
+<br>
+How was the school year 2021 - 2022 for me? I can best describe it as a bicycle ride.
+ <br>I realized that if I want to get things done, I should keep the balance going. 
+ <br>I learned that playing too much video game can lead me to a failing grade, 
+ <br>and if grinding and getting my school works done with little rest or entertainment can 
+<br> lead me to sleep deprivation and exhaustion. Because of the online learning, 
+<br> I barely learned lessons that were taught to us by our teachers. But instead, 
+ <br>I learned life lessons that are worth keeping in mind. There is a time for everything, 
+ <br>which means we shouldn’t be doing the things we aren’t supposed to at the wrong moment. 
+ <br>We need balance in our life. Too much of something can be exhausting, we’ll feel worn out, and tired. 
+ <br>We also need rest from our school works, but not too much. We need to work on our school outputs, 
+ <br>but not too much. I hope the ones who read this would be struck to heart.
+        </p>
+		<br>
+		<br>
+		<br>
+		<br>
+		</div>
+
+               <!--Overview-->
+			   <div class="content">
+                <h2 id="o" class="headings">overview</h2>
+				<h3 class="subheadings">the members.</h3>
+			</div>
+				<div class="mem content">
+				<p>
+                <b>Editors</b>
+				<br>
+				<br>
+				Liz Claveraz
+				<br>
+				Mark Ethan Valle
+				<br>
+				<br>
+				<br>
+				<b>Raw Providers</b>
+				<br>
+				<br>
+				Isabel Santos
+				<br>
+				Khassandra Que
+				<br>
+				Jodelle Gonzaludo
+				<br>
+				</p>
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </body>
+</html>
